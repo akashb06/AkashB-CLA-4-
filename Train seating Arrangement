@@ -1,0 +1,39 @@
+// Seat Arrangement on Train
+// Created by AkashB(748)
+#include <stdio.h>
+void berth_type(int s)
+{
+	if (s > 0 && s < 73)
+		if (s % 8 == 1 ||
+			s % 8 == 4)
+			printf("%d is lower berth\n", s);
+			
+		else if (s % 8 == 2 ||
+				s % 8 == 5)
+			printf("%d is middle berth\n", s);
+			
+		else if(s % 8 == 3 ||
+				s % 8 == 6)
+			printf("%d is upper berth\n", s);
+			
+		else if(s % 8 == 7)
+			printf("%d is side lower berth\n",s);
+			
+		else
+			printf("%d is side upper berth\n", s);
+			
+	else
+		printf("%d invalid seat number\n", s);
+}
+int main(){
+    int s ;
+	char n[10];
+	printf("Enter Your coach number :");
+	scanf("%s",&n);
+	printf("Enter Your Seat Number :");
+	scanf("%d",&s);
+	printf("Your Seat Details is :\n");
+	printf("%s ",n);
+	berth_type(s);
+	return 0;
+}
